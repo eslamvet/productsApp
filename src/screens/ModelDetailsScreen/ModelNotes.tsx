@@ -21,7 +21,7 @@ const ModelNotes = () => {
 
   const renderItem = useCallback<ListRenderItem<Note>>(({item:note})=> <NoteItem note={note} />,[])
   
-  const getItemLayout = useCallback((_: any,index: number)=> ({index,length:60,offset:index*60+22}),[])
+  const getItemLayout = useCallback((_: any,index: number)=> ({index,length:60,offset:index*(60+22)}),[])
 
   const saveNoteHandler = useCallback(()=>{
     if(noteDetailValue.current) dispatch(createNoteThunk({details:noteDetailValue.current,modelId})).unwrap().finally(()=>inputRef.current?.reset())

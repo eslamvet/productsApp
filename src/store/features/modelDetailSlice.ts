@@ -43,7 +43,6 @@ export const createNoteThunk = createAsyncThunk('modelDetail/createNote', async 
                     }else{
                         reject('something went wrong')
                     }
-                    resolve('done')
                 }, err => {
                     reject(err)
                 }

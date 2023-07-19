@@ -16,7 +16,7 @@ const ModelList = ({models}:ModelListProps) => {
 
   const ItemSeparatorComponent = useCallback(()=> <LineDivider customLineStyle={styles.customLineStyle} />,[])
   
-  const getItemLayout = useCallback((_: any,index: number)=> ({index,length:180,offset:index*180+52}),[])
+  const getItemLayout = useCallback((_: any,index: number)=> ({index,length:180,offset:index*(180+52)}),[])
 
   const modelItemPressHandler = useCallback<(modelId: number,modelImgUrl:string) => void>((modelId,modelImgUrl)=> navigation.navigate('ModelDetails',{modelId,modelImgUrl}),[])
 
